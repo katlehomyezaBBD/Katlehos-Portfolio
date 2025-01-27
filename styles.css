@@ -1,6 +1,10 @@
 body{
-    background-color: white;
+ 
+    background-image:linear-gradient(135deg, #131212 55%, #423c3c);
+   
+  
 }
+
 footer {
     margin-top: auto; /* Push footer to the bottom */
     background-color: #333;
@@ -15,11 +19,67 @@ footer {
 
   text-align: center;
 }
+header {
+    width: 100%;
+    background-color: transparent; /* Dark background for the tab bar */
+    padding: 10px 0; /* Space around the items */
+    position: relative; /* Use relative position to maintain standard flow */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left edge */
+}
+
+
+/* List style reset */
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes items appear next to each other */
+    justify-content: center; /* Centers the items horizontally */
+    list-style-type: none;
+}
+
+/* Style for each list item */
+nav ul li {
+    margin: 0 ; /* Space between tabs */
+}
+
+/* Link styling inside each tab */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem; /* Space inside the tab */
+    display: block;
+    font-size: 1rem; /* Default font size using relative unit */
+
+    border-radius: 5px; /* Rounded corners for tabs */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    background-color: #c93030; /* Red background on hover */
+}
+
+/* Active tab style */
+nav ul li a.active {
+    font-weight: bold;
+    color: #ff1e22;  /* Set the text color */
+  
+}
+/* Active tab style */
+nav ul li a.active:hover {
+    font-weight: bold;
+    color: #FFFFFF;  /* Set the text color */
+   
+}
+
+
+
 
 /* Centering the p inside the footer */
 footer p {
     margin: 0;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 
@@ -36,11 +96,11 @@ footer p {
   font-family: "Codec cold",sans-serif;
   font-size: 16px;
   font-weight: 700;
-  height: 50px;
+  height: 35px;
   justify-content: center;
   letter-spacing: .4px;
   line-height: 1;
-  max-width: 20%;
+  max-width: 50%;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 3px;
@@ -70,5 +130,96 @@ footer p {
 /* Active effect when clicked */
 .button-container:active {
     transform: scale(0.98); /* Slight zoom-out effect */
+}
+
+/* Intro section styling */
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    padding: 50px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+    transition: all 0.3s ease;
+}
+
+#intro:hover {
+    transform: translateY(-10px);
+}
+
+/* Styling the first paragraph */
+#intro p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Styling the main heading */
+#intro h1 {
+    text-align: left !important;
+    float: left;
+
+    font-size: 36px;
+    color: #333;
+    margin: 20px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    align-items: left;
+    text-align: left; /* Align text to the left */
+
+}
+
+#picture {
+    position: fixed;  /* Fixed position relative to the viewport */
+    top: 10%;           /* Align the image to the top */
+    right: -10%;         /* Align the image to the right */
+    width: 60%;       /* Image will occupy 60% of the screen width */
+    height: 100%;     /* Make the image height fill the entire screen */
+    object-fit: cover; /* Ensures the image covers the space without stretching */
+    z-index: 5;       /* Ensure the image is on top of other content */
+}
+
+#intro h1:hover {
+    color: #ff1e22;
+}
+
+/* Title description styling */
+.title-description {
+    font-size: 20px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Button container styling */
+.button-container {
+    margin-top: 20px;
+}
+
+
+
+.download-btn:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    #intro {
+        padding: 30px 15px;
+    }
+
+    #intro h1 {
+        font-size: 28px;
+    }
+
+    .title-description {
+        font-size: 18px;
+    }
 }
 
