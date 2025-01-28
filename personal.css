@@ -1,7 +1,7 @@
 body{
  
     background-image:linear-gradient(135deg, #131212 55%, #423c3c);
-   
+   margin-bottom: 8rem;
   
 }
 
@@ -107,8 +107,11 @@ section p{
 
 /* Hover effect for the contact card */
 .contact-card:hover {
+    background-color: black;
+    color: white;
     transform: translateY(-5px); /* Lift the card on hover */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance the shadow */
+    
 }
 
 /* Styling for the SVG icon */
@@ -144,6 +147,7 @@ section p{
 footer p {
     margin: 0;
     font-size: 1rem;
+    color: white;
 }
 
 /* Styling for the entire card */

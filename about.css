@@ -85,8 +85,10 @@ nav ul li a.active:hover {
     justify-content: space-between; /* Distribute space between the articles */
     gap: 2rem; /* Add space between the two articles */
     padding: 2rem;
-    background-image: linear-gradient(135deg, #f34079 5%, #ff1e22);
+    background-color: transparent;
     width: 80%;
+    border: 3px solid #ff4d4d;  /* Red border with 3px thickness */
+
     
     
     align-items: center; 
@@ -122,6 +124,8 @@ nav ul li a.active:hover {
     overflow: hidden; /* Ensure the overlay doesn't go out of bounds */
     width: 100%;
     height: 100%;
+    border: 3px solid #ff4d4d;  /* Red border with 3px thickness */
+
     
 }
 .image-container {

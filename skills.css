@@ -81,12 +81,13 @@ section {
 
 
 .skill-category, .education {
-    background-color: #fff;
+    background-color:transparent;
     border-radius: 8px;
     padding: 20px;
     width: 45%; /* Take up 45% width by default */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
+    color: white;
 }
 
 /* Table Styling for Education */
@@ -125,7 +126,7 @@ th {
     display: block;
     font-size: 16px;
     margin-bottom: 5px;
-    color: #333;
+    color: white
 }
 
 progress {

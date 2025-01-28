@@ -132,21 +132,7 @@ footer p {
     transform: scale(0.98); /* Slight zoom-out effect */
 }
 
-/* Intro section styling */
-#intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    text-align: left;
-    padding: 50px 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 50px auto;
-    transition: all 0.3s ease;
-}
+
 
 #intro:hover {
     transform: translateY(-10px);
@@ -155,17 +141,16 @@ footer p {
 /* Styling the first paragraph */
 #intro p {
     font-size: 18px;
-    color: #333;
+    color: #ffffff;
     margin: 10px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* Styling the main heading */
 #intro h1 {
     text-align: left !important;
     float: left;
-
-    font-size: 36px;
-    color: #333;
+    font-size: 4rem;
+    color: #fb3a3a; /* Main color of the text */
     margin: 20px 0;
     font-weight: 700;
     letter-spacing: 1px;
@@ -173,7 +158,25 @@ footer p {
     align-items: left;
     text-align: left; /* Align text to the left */
 
+    /* Very subtle glowing effect */
+    text-shadow: 0 0 1px #fb3a3a, 0 0 2px #fb3a3a; /* Soft glow with minimal intensity */
+
+    /* Apply the pulsating animation */
+    animation: pulse 2s infinite alternate;
 }
+
+/* Pulsating animation */
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 1px #fb3a3a, 0 0 2px #fb3a3a; /* Minimal glow */
+        transform: scale(1); /* Normal size */
+    }
+    100% {
+        text-shadow: 0 0 3px #fb3a3a, 0 0 4px #fb3a3a; /* Slightly more glow */
+        transform: scale(1.01); /* Slightly bigger on pulse */
+    }
+}
+
 
 /* Ensure the image fits well on smaller screens */
 #picture {
@@ -195,7 +198,7 @@ footer p {
     align-items: left;
     text-align: left;
     padding: 50px 20px;
-    background-color: #fff;
+    background-color: transparent;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     max-width: 600px;
