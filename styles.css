@@ -57,7 +57,7 @@ nav ul li a {
 
 /* Hover effect */
 nav ul li a:hover {
-    background-color: #c93030; /* Red background on hover */
+    background-image: linear-gradient(135deg, #f34079 5%, #ff1e22);
 }
 
 /* Active tab style */
@@ -175,15 +175,114 @@ footer p {
 
 }
 
+/* Ensure the image fits well on smaller screens */
 #picture {
     position: fixed;  /* Fixed position relative to the viewport */
     top: 10%;           /* Align the image to the top */
     right: -8%;         /* Align the image to the right */
-    width: 40%;       /* Image will occupy 60% of the screen width */
-    height: 90%;     /* Make the image height fill the entire screen */
-    object-fit: cover; /* Ensures the image covers the space without stretching */
-    z-index: 5;       /* Ensure the image is on top of other content */
-    opacity: 0.5;
+    width: 40%;         /* Image will occupy 60% of the screen width */
+    height: 90%;        /* Make the image height fill the entire screen */
+    object-fit: cover;  /* Ensures the image covers the space without stretching */
+    z-index: 5;         /* Ensure the image is on top of other content */
+    opacity: 0.5;       /* Set the image opacity */
+    transition: all 0.3s ease;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    padding: 50px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+    transition: all 0.3s ease;
+}
+
+#intro:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    /* Make the image smaller on mobile and change its position */
+    #picture {
+        width: 60%;        /* Reduce width on smaller screens */
+        height: 70%;       /* Adjust height accordingly */
+        right: -15%;       /* Move image more to the right */
+        top: 5%;           /* Adjust the top margin */
+        opacity: 0.8;      /* Make image slightly more opaque */
+    }
+
+    #intro {
+        padding: 20px 15px;
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    #intro h1 {
+        font-size: 28px;   /* Make the heading smaller */
+    }
+
+    .title-description {
+        font-size: 18px;   /* Smaller description text */
+    }
+
+    .button-container {
+        margin-top: 15px;   /* Adjust button spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    #picture {
+        width: 80%;         /* Even smaller on very small screens */
+        height: 60%;        /* Adjust height to fit better */
+        right: -20%;        /* More space on the right */
+        top: 2%;            /* Further adjust top spacing */
+    }
+
+    #intro {
+        padding: 20px 10px;
+        margin-top: 20px;
+    }
+
+    #intro h1 {
+        font-size: 24px;    /* Smaller heading on small screens */
+    }
+
+    .title-description {
+        font-size: 16px;    /* Even smaller text for mobile */
+    }
+}
+
+@media (max-width: 900px) {
+    /* Hide the image completely for screens smaller than 792px */
+    #picture {
+        display: none;
+    }
+
+    #intro {
+        padding: 20px 15px;
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    #intro h1 {
+        font-size: 28px;   /* Make the heading smaller */
+    }
+
+    .title-description {
+        font-size: 18px;   /* Smaller description text */
+    }
+
+    .button-container {
+        margin-top: 15px;   /* Adjust button spacing */
+    }
 }
 
 #intro h1:hover {
