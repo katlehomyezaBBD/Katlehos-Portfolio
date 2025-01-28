@@ -21,27 +21,29 @@
 
 #details {
     background: linear-gradient(145deg, #f0f0f0, #ffffff);
-    padding: clamp(1rem, 3vw, 1.5rem);
+    padding: clamp(1rem, 3vw, 2rem);
     border-radius: clamp(8px, 1vw, 12px);
     transition: all 0.3s ease;
+    max-height: 28rem;  
+      
+
     
 }
 
 #details p {
-    font-family: Arial, Helvetica, sans-serif; /* Web-safe font stack */
-    font-size: clamp(0.1rem, 2vw, 0.9rem); /* Responsive font size */
-    line-height: 1.6; /* Increase line height for better readability */
-    color: #333; /* Dark gray text for readability */
-    margin-bottom: 1rem; /* Add space at the bottom of the paragraph */
-    text-align: justify; /* Justify text for a clean, neat appearance */
-    letter-spacing: 0.5px; /* Slight letter-spacing for improved clarity */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for a soft glow effect */
-    padding: 0 1rem; /* Add horizontal padding for better spacing */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.1rem, 2vw, 0.9rem); 
+    line-height: 1.8; 
+    color: #333;
+    text-align: justify;
+    letter-spacing: 0.5px; 
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+   
 }
 
 
 #image {
-    max-height: 30rem;    
+    max-height: 32rem;    
 
     background-color: transparent;
     border-radius: clamp(8px, 1vw, 12px);
@@ -72,15 +74,6 @@
     opacity: 0;
 }
 
-#image:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 40px rgba(255, 77, 77, 0.25);
-}
-
-#image:hover .overlay {
-    left: 0;
-    opacity: 1;
-}
 
 #image img {
     width: 100%;
@@ -92,7 +85,3 @@
     filter: brightness(1.05);
 }
 
-#image:hover img {
-    transform: scale(1.1);
-    filter: brightness(1.1);
-}
