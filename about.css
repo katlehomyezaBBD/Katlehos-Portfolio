@@ -1,178 +1,98 @@
-body{
- 
-    background-image:linear-gradient(135deg, #131212 55%, #423c3c);
-   
-  
-}
-main {
-    display: flex;
-    justify-content: center;
-}
-
-footer {
-    margin-top: auto; /* Push footer to the bottom */
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    border-top: 3px solid #ff4d4d; /* Adds a red line at the top of the footer */
-    position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-
-  text-align: center;
-}
-header {
-    width: 100%;
-    background-color: transparent; /* Dark background for the tab bar */
-    padding: 10px 0; /* Space around the items */
-    position: relative; /* Use relative position to maintain standard flow */
-    top: 0; /* Position at the top */
-    left: 0; /* Align to the left edge */
-}
-
-
-/* List style reset */
-nav ul {
-    margin: 0;
-    padding: 0;
-    display: flex; /* Makes items appear next to each other */
-    justify-content: center; /* Centers the items horizontally */
-    list-style-type: none;
-}
-
-/* Style for each list item */
-nav ul li {
-    margin: 0 ; /* Space between tabs */
-}
-
-/* Link styling inside each tab */
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 1.5rem; /* Space inside the tab */
-    display: block;
-    font-size: 1rem; /* Default font size using relative unit */
-
-    border-radius: 5px; /* Rounded corners for tabs */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-/* Hover effect */
-nav ul li a:hover {
-    background-image: linear-gradient(135deg, #f34079 5%, #ff1e22);}
-
-/* Active tab style */
-nav ul li a.active {
-    font-weight: bold;
-    color: #ff1e22;  /* Set the text color */
-  
-}
-/* Active tab style */
-nav ul li a.active:hover {
-    font-weight: bold;
-    color: #FFFFFF;  /* Set the text color */
-   
-}
-
-
-
 #info {
-    margin-top: 2rem; /* Add space at the top to bring it down */
-
-    display: flex; /* Use flexbox to place items side by side */
-    justify-content: space-between; /* Distribute space between the articles */
-    gap: 2rem; /* Add space between the two articles */
-    padding: 2rem;
+    margin: clamp(1rem, 4vh, 2rem) auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    padding: clamp(1rem, 3vw, 2rem);
     background-color: transparent;
-    width: 80%;
-    border: 3px solid #ff4d4d;  /* Red border with 3px thickness */
-
-    
-    
-    align-items: center; 
-
-    justify-content: center;
-}
-
-
-/* Style for the left article */
-#details{
-    flex: 1; /* Left article takes up most of the available space */
-    background-color: #f0f0f0; /* Light gray background */
-    padding: 1rem;
-    border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
-
-}
-/* Hover effect for the left article */
-#details:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
-    background-color: #e0e0e0; /* Slightly darker background color on hover */
-    transform: scale(1.3) translateX(10%); /* Scale the element and move it to the center horizontally */
-    z-index: 10;
-
-}
-
-/* Style for the right article */
- #image {
-    flex: 0 0 25%; /* Right article takes up 25% of the available space */
-    background-color: #e0e0e0; /* Slightly darker gray background */
-    border-radius: 5px;
+    width: min(90%, 1200px);
+    border: 3px solid #ff4d4d;
+    border-radius: clamp(8px, 1vw, 12px);
     position: relative;
-    overflow: hidden; /* Ensure the overlay doesn't go out of bounds */
-    width: 100%;
-    height: 100%;
-    border: 3px solid #ff4d4d;  /* Red border with 3px thickness */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
 
+#info:hover {
+
+    box-shadow: 0 12px 40px rgba(255, 77, 77, 0.15);
+}
+
+#details {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    padding: clamp(1rem, 3vw, 1.5rem);
+    border-radius: clamp(8px, 1vw, 12px);
+    transition: all 0.3s ease;
     
 }
+
+#details p {
+    font-family: Arial, Helvetica, sans-serif; /* Web-safe font stack */
+    font-size: clamp(0.1rem, 2vw, 0.9rem); /* Responsive font size */
+    line-height: 1.6; /* Increase line height for better readability */
+    color: #333; /* Dark gray text for readability */
+    margin-bottom: 1rem; /* Add space at the bottom of the paragraph */
+    text-align: justify; /* Justify text for a clean, neat appearance */
+    letter-spacing: 0.5px; /* Slight letter-spacing for improved clarity */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for a soft glow effect */
+    padding: 0 1rem; /* Add horizontal padding for better spacing */
+}
+
+
+#image {
+    max-height: 30rem;    
+
+    background-color: transparent;
+    border-radius: clamp(8px, 1vw, 12px);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border: 3px solid #ff4d4d;
+    box-shadow: 0 8px 32px rgba(255, 77, 77, 0.15);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
 .image-container {
     width: 100%;
     height: 100%;
     position: relative;
+    overflow: hidden;
 }
+
 .overlay {
     position: absolute;
     top: 0;
-    left: 100%; /* Initially position the overlay outside the container */
+    left: 100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: left 5s ease-in-out; /* Slide-in effect */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
 }
 
-/* Hover effect to slide in the overlay */
+#image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(255, 77, 77, 0.25);
+}
+
 #image:hover .overlay {
-    left: 0; /* When hovered, the overlay slides in */
-
+    left: 0;
+    opacity: 1;
 }
 
-/* Style for the image inside the right article */
-#image img{
-    width: 100%; /* Make the image take up the full width of its container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Rounded corners for the image */
-    backface-visibility: hidden; /* Hides the back of the image when it is flipped */
-    transition: transform 0.6s ease, opacity 0.6s ease; /* Smooth transition */
+#image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: calc(clamp(8px, 1vw, 12px) - 3px);
+    transform: scale(1.01);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(1.05);
 }
 
-
-
-
-
-
-/* Centering the p inside the footer */
-footer p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-/* Optionally, if you want to change the flex direction on smaller screens */
-@media (max-width: 768px) {
-    #info {
-        flex-direction: column; /* Stack the items vertically */
-        min-height: 400px; /* Ensure it remains tall on smaller screens */
-    }
+#image:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
 }
