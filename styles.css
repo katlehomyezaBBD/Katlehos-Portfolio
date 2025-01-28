@@ -10,7 +10,7 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 1rem 0;
     border-top: 3px solid #ff4d4d; /* Adds a red line at the top of the footer */
     position: fixed;
   left: 0;
@@ -178,11 +178,12 @@ footer p {
 #picture {
     position: fixed;  /* Fixed position relative to the viewport */
     top: 10%;           /* Align the image to the top */
-    right: -10%;         /* Align the image to the right */
-    width: 60%;       /* Image will occupy 60% of the screen width */
-    height: 100%;     /* Make the image height fill the entire screen */
+    right: -8%;         /* Align the image to the right */
+    width: 40%;       /* Image will occupy 60% of the screen width */
+    height: 90%;     /* Make the image height fill the entire screen */
     object-fit: cover; /* Ensures the image covers the space without stretching */
     z-index: 5;       /* Ensure the image is on top of other content */
+    opacity: 0.5;
 }
 
 #intro h1:hover {

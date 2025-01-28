@@ -1,0 +1,303 @@
+body{
+ 
+    background-image:linear-gradient(135deg, #131212 55%, #423c3c);
+   
+  
+}
+
+footer {
+    margin-top: auto; /* Push footer to the bottom */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 3px solid #ff4d4d; /* Adds a red line at the top of the footer */
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  text-align: center;
+}
+header {
+    width: 100%;
+    background-color: transparent; /* Dark background for the tab bar */
+    padding: 10px 0; /* Space around the items */
+    position: relative; /* Use relative position to maintain standard flow */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left edge */
+}
+
+
+/* List style reset */
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes items appear next to each other */
+    justify-content: center; /* Centers the items horizontally */
+    list-style-type: none;
+}
+
+/* Style for each list item */
+nav ul li {
+    margin: 0 ; /* Space between tabs */
+}
+
+/* Link styling inside each tab */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem; /* Space inside the tab */
+    display: block;
+    font-size: 1rem; /* Default font size using relative unit */
+
+    border-radius: 5px; /* Rounded corners for tabs */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    background-color: #c93030; /* Red background on hover */
+}
+
+/* Active tab style */
+nav ul li a.active {
+    font-weight: bold;
+    color: #ff1e22;  /* Set the text color */
+  
+}
+/* Active tab style */
+nav ul li a.active:hover {
+    font-weight: bold;
+    color: #FFFFFF;  /* Set the text color */
+   
+}
+
+#contacts{
+    text-align: center;
+    color:white
+}
+section p{
+    text-align: center;
+    color:#c93030
+}
+
+/* Styling for the contact card */
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Styling for the contact card container */
+.contact-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    width: 220px; /* Width of the contact card */
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333; /* Text color */
+    cursor: pointer;
+    justify-content: center;
+}
+
+/* Hover effect for the contact card */
+.contact-card:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance the shadow */
+}
+
+/* Styling for the SVG icon */
+.icon {
+    margin-right: 10px; /* Space between the icon and the text */
+    fill: #ff4d4d; /* Red color for the SVG */
+}
+
+/* Styling for the text */
+.contact-card span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #Email {
+        flex-direction: column; /* Stack the card vertically on mobile */
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 150px; /* Reduce width of the card on mobile */
+    }
+}
+
+
+
+
+
+
+/* Centering the p inside the footer */
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Styling for the entire card */
+#my-card {
+    width: 60%; /* Set width for a compact card */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center content */
+    margin: 20px auto; /* Center the card in the page */
+}
+
+/* Styling for the 4 Social Links */
+#social-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Each social link box */
+.social-link {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-link a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+}
+
+/* Icon styling */
+.social-link img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    fill: #ff4d4d;
+}
+
+/* Hover effect for social links */
+.social-link:hover {
+    transform: translateY(-5px); /* Lift the box */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+}
+
+/* Label (link text) styling */
+.social-link span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    #social-links {
+        grid-template-columns: 1fr; /* Stack the social links on small screens */
+    }
+}
+
+/* Circle image styling */
+#circle-pic img {
+    width: 100px; /* Set image size */
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fills the circle nicely */
+    border: 3px solid #ff4d4d; /* Optional: border around the image */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+/* Name and role styling */
+#my-face h4 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#my-face p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Address styling */
+#address {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+#address p {
+    margin: 5px 0; /* Space between address lines */
+}
+
+/* Progress Donuts / Progress Bars */
+#progress-donuts article {
+    margin: 15px 0; /* Space between each progress bar */
+}
+
+#progress-donuts label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    appearance: none;
+    background-color: #f4f4f9;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+progress::-webkit-progress-bar {
+    background-color: #f4f4f9;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #ff4d4d;
+    border-radius: 10px;
+}
+#progress-donuts {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Adds spacing between the items */
+    align-items: center; /* Aligns the items vertically */
+    flex-wrap: wrap; /* Makes it responsive (wraps to new line if needed) */
+}
+
+.progress-item {
+    text-align: center; /* Ensures the text is centered below the SVG */
+}
+
+.progress-donut {
+    /* Rotate the donut itself but not the text */
+    transform: rotate(-90deg); /* Rotate the donut to start from the top */
+    display: block;
+    margin: 0 auto; /* Center the donut */
+}
+
+/* Fixing the text rotation */
+.progress-text {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transform: rotate(90deg); /* Rotate the text 90 degrees back to upright */
+    transform-origin: center;
+}
+
